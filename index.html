@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="display">
+        <input type="text" id="input" disabled>
+      </div>
+      <div class="buttons">
+        <button class="sound-button" onclick="clearInput()">C</button>
+        <button class="sound-button" onclick="addInput('%')">%</button>
+        <button class="sound-button" onclick="addInput('/')">÷</button>
+        <button class="sound-button" onclick="addInput('*')">x</button>
+        <button class="sound-button" onclick="addInput('7')">7</button>
+        <button class="sound-button" onclick="addInput('8')">8</button>
+        <button class="sound-button" onclick="addInput('9')">9</button>
+        <button class="sound-button" onclick="addInput('-')">-</button>
+        <button class="sound-button" onclick="addInput('4')">4</button>
+        <button class="sound-button" onclick="addInput('5')">5</button>
+        <button class="sound-button" onclick="addInput('6')">6</button>
+        <button class="sound-button" onclick="addInput('+')">+</button>
+        <button class="sound-button" onclick="addInput('1')">1</button>
+        <button class="sound-button" onclick="addInput('2')">2</button>
+        <button class="sound-button" onclick="addInput('3')">3</button>
+        <button class="sound-button" onclick="calculate()">=</button>
+        <button class="sound-button" onclick="addInput('0')">0</button>
+        <button class="sound-button" onclick="addInput('.')">.</button>
+      </div>
+    </div>
+<script>
+
+var input = document.getElementById('input');
+
+function addInput(value) {
+  input.value += value;
+}
+
+function clearInput() {
+  input.value = '';
+}
+
+function calculate() {
+  input.value = eval(input.value);
+}
+</script>
+</body>
+
+</html>
+
